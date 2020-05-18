@@ -1,0 +1,38 @@
+.container{
+	width: 30%;
+	height: 150px;
+	background-color: white;
+	padding: 20px;
+	margin: 0 auto;
+	box-shadow: 5px 5px 5px grey;
+	background: linear-gradient(white,grey);
+	transition: 1s;
+	margin-top: 150px;
+}
+body{
+	background-color: linear-gradient(white,blue)
+}
+label{
+	font-family: sans-serif;
+}
+.input{
+	width: 80%;
+	height: 50px;
+	margin-top: 20px;
+	text-align: center;
+	font-size: 40px;
+	border: 0px solid white;
+}
+.btn{
+	border: 1px solid blue;
+	height: 45px;
+	width: 40px;
+	transition: 2s;
+	width: 81%;
+	background-color: grey;
+	margin-top: 10px;
+}
+.btn:hover{
+	transition: 2s;
+	background: radial-gradient(white,grey);
+}
