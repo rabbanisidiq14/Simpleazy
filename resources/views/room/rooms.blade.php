@@ -17,7 +17,7 @@
 
 		@foreach($nama_room as $nama_rooms)
 			@if(\Session::has('admin'))
-				<h1 class="display-2">{{ $nama_rooms->nama_room }}<a href="/er/{{ Auth::user()->id }}/{{ $id_room }}"><sup>*Edit</sup></a></h1>
+				<h1 class="display-2">{{ $nama_rooms->nama_room }}<a href="{{ url('/er') }}/{{ Auth::user()->id }}/{{ $id_room }}"><sup>*Edit</sup></a></h1>
 			@else
 				<h1 class="display-2">{{ $nama_rooms->nama_room }}</h1>
 			@endif
@@ -41,9 +41,9 @@
 			<!-- Invite using email links -->
 			<li class="list-group-item">Undang anggota: <a href="">Undang</a></li>
 			<!-- Setting Ruangan -->
-			<li class="list-group-item"><a href="/s/{{ Auth::user()->id }}/{{ $id_room }}">Buat Pengumpulan Kas</a></li>
-			<li class="list-group-item"><a href="/d/{{ Auth::user()->id}}/{{ $id_room }}/lists">Task</a></li>
-			<li class="list-group-item"><a href="/stats/{{ Auth::user()->id }}/{{ $id_room }}/details">Stats</a></li>
+			<li class="list-group-item"><a href="{{ url('/s') }}/{{ Auth::user()->id }}/{{ $id_room }}">Buat Pengumpulan Kas</a></li>
+			<li class="list-group-item"><a href="{{ url('/d') }}/{{ Auth::user()->id}}/{{ $id_room }}/lists">Task</a></li>
+			<li class="list-group-item"><a href="{{ url('/stats') }}/{{ Auth::user()->id }}/{{ $id_room }}/details">Stats</a></li>
 			@elseif(\Session::has('member'))
 			@endif
 		</ul>
@@ -52,7 +52,7 @@
 		@if(\Session::has('member'))
 			@foreach($kas as $ks)
 			<!-- Move this code to another page. -->
-	<a href="/b/{{ Auth::user()->id }}/{{ $id_room }}/{{ $ks->id_kas }}">{{ $ks->status }}</a>
+	<a href="{{ url('/b') }}/{{ Auth::user()->id }}/{{ $id_room }}/{{ $ks->id_kas }}">{{ $ks->status }}</a>
 			@endforeach
 		@endif
 
@@ -71,7 +71,7 @@
 		<div id="myUL" style="width: 100%;height: 50px;background-color: #eeeded;text-decoration: none; float: left;">
 			<div class="list-group">
 			@foreach($member as $members)
-		  		<a href="/member_info/{{ $members->id }}/{{ $id_room }}" class="list-group-item">{{ $members->name }}</a>
+		  		<a href="{{ url('/member_info') }}/{{ $members->id }}/{{ $id_room }}" class="list-group-item">{{ $members->name }}</a>
 		  	@endforeach
 		  </div>
 		</div>

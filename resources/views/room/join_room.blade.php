@@ -22,7 +22,7 @@
 
 	<div class="container">
 		<div class="card p-4 col-4">
-			<form action="/join_process" method="GET">
+			<form action="{{ url('/join_process') }}" method="GET">
 				<h2>Masukkan token</h2>
 				<br>
 				<input type="text" name="id_room" class="input">

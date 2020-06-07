@@ -6,10 +6,10 @@
         @foreach ($task as $tasks)
             <div class="row">
                 <div class="col">
-                <a href="/d/{{ $id_user }}/{{ $id_room }}/details/{{ $tasks->id_kas }}">{{ $tasks->deskripsi }}</a>
+                <a href="{{ url('/d') }}/{{ $id_user }}/{{ $id_room }}/details/{{ $tasks->id_kas }}">{{ $tasks->deskripsi }}</a>
                 </div>
             </div>
         @endforeach
-        <a href="/r/{{ Auth::user()->id }}/{{ $id_room }}" class="btn btn-primary">Kembali</a>
+        <a href="{{ url('/r') }}/{{ Auth::user()->id }}/{{ $id_room }}" class="btn btn-primary">Kembali</a>
     </div>
 @endsection

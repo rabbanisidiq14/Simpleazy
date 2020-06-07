@@ -7,8 +7,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-	<link rel="stylesheet" href="css/data.css">  
-	<link rel="icon" href="mars.png" type="img/png">
+	<link rel="stylesheet" href="{{ assets('css/data.css') }}">  
+	<link rel="icon" href="mars.png" type="{{ assets('img/png') }}">
 
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 </head>

@@ -9,8 +9,8 @@
 @endif
 
 <div class="container">
-    <a href="/join_room" class="btn btn-primary">Gabung</a>
-    <a href="/create_room" class="btn btn-primary">Buat Ruangan</a>
+    <a href="{{url('/join_room')}}" class="btn btn-primary">Gabung</a>
+    <a href="{{url('/create_room')}}" class="btn btn-primary">Buat Ruangan</a>
 </div>
 
 
@@ -28,7 +28,7 @@
                 <img src="images/{{ $admin->foto }}" class="card-img-top" alt="...">
                 @endif                
                 <div class="card-body">
-                    <h5 class="card-title"><a href="/r/{{ Auth::user()->id }}/{{ $admin->id_room }}">{{ $admin->nama_room }}</a></h5>
+                    <h5 class="card-title"><a href="{{ url('/r') }}/{{ Auth::user()->id }}/{{ $admin->id_room }}">{{ $admin->nama_room }}</a></h5>
                     <p class="card-text">{{ $admin->id_room }}</p>
                 </div>
             </div>
@@ -68,7 +68,7 @@
             <div class="card p-4">
                 <h4 class="display-5">Ruangan yang anda gabungi!</h4>
                 @foreach($joined_room as $member)
-                    <a href="/r/{{ Auth::user()->id }}/{{ $member->id_room }}">{{ $member->nama_room }}</a>
+                    <a href="{{ url('/r') }}/{{ Auth::user()->id }}/{{ $member->id_room }}">{{ $member->nama_room }}</a>
                     <br>
                 @endforeach
             </div>

@@ -2,7 +2,7 @@
 
 @section('content')
 <div class="container">
-	<form action="/mengirim" method="GET">
+	<form action="{{ url('/mengirim') }}" method="GET">
 		@csrf
 		<div class="row">
 			<div class="col p-5">

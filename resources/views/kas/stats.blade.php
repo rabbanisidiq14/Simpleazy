@@ -4,7 +4,7 @@
 <h1 class="text-center">Stats</h1>
 <div class="container">
     <canvas id="myChart"></canvas>
-    <a href="/r/{{ $id_admin }}/{{ $id_room }}" class="btn btn-primary">Kembali</a>
+    <a href="{{ url('/r') }}/{{ $id_admin }}/{{ $id_room }}" class="btn btn-primary">Kembali</a>
 </div>
 	
 <script type="text/javascript">

@@ -65,9 +65,9 @@ class RoomController extends Controller
             'foto' => $imageName
     	]);
         if ($status) {
-            return redirect('/home')->with('success','Room Berhasil Dibuat');
+            return redirect(url('/home'))->with('success','Room Berhasil Dibuat');
         }else{
-            return redirect('/create_room')->with('error','Tidak dapat membuat room');    
+            return redirect(url('/create_room'))->with('error','Tidak dapat membuat room');    
         }
     	
     }

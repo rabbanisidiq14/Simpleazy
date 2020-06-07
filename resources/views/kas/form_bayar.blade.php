@@ -2,7 +2,7 @@
 
 @section('content')
 	<div class="container">
-		<form method="POST" action="/b/process">
+		<form method="POST" action="{{ url('/b/process') }}">
 			@csrf
 			<div class="form-group">
 				<label>Bayar?</label>

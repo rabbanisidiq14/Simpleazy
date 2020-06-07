@@ -3,7 +3,7 @@
 @section('content')
 
 	<div class="container">
-		<form action="/s/process" method="GET">
+		<form action="{{ url('/s/process') }}" method="GET">
 			@csrf
 			<div class="form-group">
 				<label>Jumlah:</label>

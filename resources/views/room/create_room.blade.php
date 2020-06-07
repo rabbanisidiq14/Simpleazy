@@ -15,7 +15,7 @@
 				<h4>Buat Ruangan</h4>	
 			</div>
 			<br>
-			<form action="/process" method="POST" enctype="multipart/form-data">
+			<form action="{{url('/process')}}" method="POST" enctype="multipart/form-data">
 					@csrf
 					<p>Nama Ruangan</p>
 					<input type="text" name="nama_room">

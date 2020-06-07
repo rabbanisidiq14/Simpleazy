@@ -20,7 +20,7 @@
             <th scope="row">{{ $i }}</th>
             <td>{{$s->name}}</td>
             <td>{{$s->status}}</td>
-            <td><a href="/member_info/{{$s->id}}/{{$s->id_room}}">Tagih</a></td>
+            <td><a href="{{ url('/member_info') }}/{{$s->id}}/{{$s->id_room}}">Tagih</a></td>
           </tr>
         @php
             $i++;
